@@ -1,0 +1,14 @@
+meta {
+    title: "CSS custom Hugo";
+    description: "CSS custom Hugo";
+    version: "1";
+    author: "hu9o";
+}
+area[landuse=vineyard]{
+    /* fill-color: #b1e0c2; */
+    fill-color: #b4a6e7;
+}
+area[natural=scrub]{
+    /* fill-color: #b1e0c2; */
+    fill-color: #8b852a;
+}
