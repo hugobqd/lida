@@ -27,7 +27,7 @@ export default {
   // space: [...spacings],
   space: ["0", ".5rem", "1rem", "2rem", "3.5rem"],
   breakpoints: [...breakpoints],
-  bp: [`(min-width: ${breakpoints[0]})`],
+  bp: { bp0: `(min-width: ${breakpoints[0]})` },
   fontSizes: [13, 16, 19, 23, 27, 33, 39, 47],
   fluidFontSizes: {
     navBar: ["12px", "16px", "20px"],
