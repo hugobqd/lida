@@ -12,6 +12,7 @@ import Heading from "../components/Heading";
 import ReactPlayer from "react-player";
 import { Row, Col } from "../components/GridSystem";
 // import Box from "../components/Box";
+import DocumentsList from "../components/DocumentsList";
 
 export const ProductionPostTemplate = ({
   content,
@@ -19,6 +20,7 @@ export const ProductionPostTemplate = ({
   credit,
   date,
   description,
+  document_list,
   director,
   featuredimage,
   gallery_list,
@@ -103,6 +105,8 @@ export const ProductionPostTemplate = ({
 
       <Container text>
         <PostContent content={content} />
+        <br />
+        {document_list && <DocumentsList list={document_list} p={3} mb={5} />}
       </Container>
 
       <Container py={5}>
@@ -169,6 +173,7 @@ const ProductionPost = ({ data }) => {
         }
         credit={post.frontmatter.credit}
         date={post.frontmatter.date}
+        document_list={post.frontmatter.document_list}
         director={post.frontmatter.director}
         featuredimage={post.frontmatter.featuredimage}
         gallery_list={post.frontmatter.gallery_list}
@@ -200,6 +205,15 @@ export const pageQuery = graphql`
         credit
         date(formatString: "YYYY")
         description
+        document_list {
+          document_item {
+            id
+            publicURL
+            base
+            extension
+          }
+          document_title
+        }
         director
         featuredimage {
           childImageSharp {

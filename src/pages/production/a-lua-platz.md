@@ -3,7 +3,7 @@ templateKey: production-post
 title: A lua platz
 date: 2019-01-01T11:00:00.000Z
 director: Jérémy Gravayat
-featuredimage: /img/1467469587_1.jpg
+featuredimage: /img/lua.platz.04.gravayat.2018.demolition.du.bidonville.de.saint-ouen.2017.jpg
 trailer: https://vimeo.com/295538412
 vod: https://www.arte.tv/fr/videos/095814-000-A/prendre-place/
 description: >-
@@ -16,8 +16,8 @@ description: >-
 
   Des Grands Ensembles jusqu’au Grand Paris, leurs trajectoires retissent une histoire commune, celle de solidarités habitantes refusant la relégation.
 gallery_list:
-  # - gallery_img: /img/lua.platz.01.gravayat.entre-e.du.bidonville.des.coquetiers.bobigny.2017.tiff
-  # - gallery_img: /img/lua.platz.03.gravayat.2018.iulian.florica.estera.roumanie.2016.tiff
+  - gallery_img: /img/lua.platz.01.gravayat.entre-e.du.bidonville.des.coquetiers.bobigny.2017.jpg
+  - gallery_img: /img/lua.platz.03.gravayat.2018.iulian.florica.estera.roumanie.2016.jpg
 document_list:
   - document_item: /img/dossierdepresse_french_190724.pdf
     document_title: Dossier de presse
