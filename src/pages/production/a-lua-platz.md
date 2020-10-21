@@ -3,7 +3,7 @@ templateKey: production-post
 title: A lua platz
 date: 2019-01-01T11:00:00.000Z
 director: Jérémy Gravayat
-featuredimage: /img/lua.platz.04.gravayat.2018.demolition.du.bidonville.de.saint-ouen.2017.tiff
+featuredimage: /img/1467469587_1.jpg
 trailer: https://vimeo.com/295538412
 vod: https://www.arte.tv/fr/videos/095814-000-A/prendre-place/
 description: >-
