@@ -18,8 +18,8 @@ gallery_list:
   - gallery_img: /img/riot01.jpg
   - gallery_img: /img/riot05.jpg
 document_list:
-  - document_item: /img/dossier-de-presse-riot-hd.pdf
-    document_title: Dossier de presse
+  # - document_item: /img/dossier-de-presse-riot-hd.pdf
+  #   document_title: Dossier de presse
   - document_item: /img/affiche-riot-hd.jpg
     document_title: Affiche
 technical: "Durée : 13 min 30"

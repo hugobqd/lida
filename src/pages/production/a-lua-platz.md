@@ -16,8 +16,8 @@ description: >-
 
   Des Grands Ensembles jusqu’au Grand Paris, leurs trajectoires retissent une histoire commune, celle de solidarités habitantes refusant la relégation.
 gallery_list:
-  - gallery_img: /img/lua.platz.01.gravayat.entre-e.du.bidonville.des.coquetiers.bobigny.2017.tiff
-  - gallery_img: /img/lua.platz.03.gravayat.2018.iulian.florica.estera.roumanie.2016.tiff
+  # - gallery_img: /img/lua.platz.01.gravayat.entre-e.du.bidonville.des.coquetiers.bobigny.2017.tiff
+  # - gallery_img: /img/lua.platz.03.gravayat.2018.iulian.florica.estera.roumanie.2016.tiff
 document_list:
   - document_item: /img/dossierdepresse_french_190724.pdf
     document_title: Dossier de presse

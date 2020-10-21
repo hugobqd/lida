@@ -183,10 +183,7 @@ collections:
         widget: list
         required: false
         fields: 
-          - label: "Image"
-            name: gallery_img
-            widget: image
-            required: false
+          - {label: "Image", name: gallery_img, widget: image, required: false}
           - {label: "Légende", name: gallery_caption, widget: text, required: false}
       - {label: "Texte principal", name: body, widget: markdown, required: false}
       - name : document_list
