@@ -8,7 +8,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allPages: allMarkdownRemark(limit: 1000) {
         edges {
           node {
             id
@@ -23,6 +23,11 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      blogPages: allMarkdownRemark(
+        filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      ) {
+        totalCount
+      }
     }
   `).then((result) => {
     if (result.errors) {
@@ -30,10 +35,11 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
+    const posts = result.data.allPages.edges;
 
     posts.forEach((edge) => {
       const id = edge.node.id;
+      // const featuredProd = edge.node.frontmatter.featuredproduction;
       createPage({
         path: edge.node.frontmatter.forcedURL
           ? edge.node.frontmatter.forcedURL
@@ -45,6 +51,7 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
+          // featuredProd,
         },
       });
     });
@@ -69,6 +76,23 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve(`src/templates/tags.js`),
         context: {
           tag,
+        },
+      });
+    });
+
+    // Paginated blog :
+    // const posts = result.data.allPages.edges
+    const postsPerPage = 5;
+    const numPages = Math.ceil(result.data.blogPages.totalCount / postsPerPage);
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/actualites` : `/actualites/${i + 1}`,
+        component: path.resolve("./src/templates/blog-page-paginated.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
         },
       });
     });
