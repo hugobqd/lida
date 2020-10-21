@@ -148,6 +148,60 @@ collections:
           - {label: "Titre", name: team_title, widget: string, required: false}
           - {label: "Texte", name: team_text, widget: text, required: false}
 
+  - name: production
+    label: "Productions"
+    folder: "src/pages/production"
+    create: true
+    slug: "{{slug}}"
+    required: false
+    sortable_fields: ['commit_date', 'title', 'date']
+    summary: "{{title}} [{{year}}]"
+    preview_path: "production/{{slug}}"
+    view_filters:
+      - {label: 'Films avec VOD', field: vod, pattern: '.'}
+    fields:
+      - {label: "Template Key", name: templateKey, widget: hidden, default: "production-post", required: false}
+      - {label: "🖋 Titre", name: title, widget: string}
+      - {label: "📅 Date de sortie", name: date, widget: datetime, hint: "Date réelle ou estimée. Seule l'année est affichée, mais l'ensemble de la date sert au trie.", required: false}
+      - {label: "🧑‍🎨 Réalisateur·trice", name: director, widget: string, required: false}
+      - {label: "🖼️ Image principale", name: featuredimage, widget: image, required: false}
+      - {label: "🎞 Bande-annonce", name: trailer, widget: string, hint: "URL de la vidéo. Exemple : https://www.youtube.com/watch?v=9D0eyl7-XQA", required: false}
+      - {label: "📽 VOD", name: vod, widget: string, hint: "URL de la page de VOD.", required: false}
+      - name: VOD_list,
+        label: "📽 VOD"
+        label_singular: "lien VOD"
+        widget: list
+        required: false
+        fields: 
+          - {label: "📽 Lien VOD", name: vod_item, widget: string, hint: "URL de la page de VOD.", required: false}
+      - {label: "💬 Introduction", name: description, widget: markdown, buttons: ["bold", "italic", "link"], editorComponents: [], required: false}
+  #     # - {label: "Sur la page d'accueil", name: featuredpost, widget: boolean, required: false}
+  #     # - {label: "Tags", name: tags, widget: list, hint: "'documentaire' ou 'fiction'", required: false}
+      - name: gallery_list
+        label: "🖼️ Galerie"
+        label_singular: "🖼️ Image"
+        widget: list
+        required: false
+        fields: 
+          - label: "Image"
+            name: gallery_img
+            widget: image
+            required: false
+          - {label: "Légende", name: gallery_caption, widget: text, required: false}
+      - {label: "Texte principal", name: body, widget: markdown, required: false}
+      - name : document_list
+        label : "📁 Documents"
+        widget: list
+        label_singular: "📃 Fichier"
+        required: false
+        fields:
+          - {name: document_item, label: "Document", widget: file, required: true}
+          - {name: document_title, label: "Nom du fichier", widget: string, required: false}
+      - {label: "⚙️ Fiche technique", name: technical, widget: markdown, required: false}
+      - {label: "🧑🏾‍🤝‍🧑🏼 Crédits", name: credit, widget: markdown, required: false}
+      - {label: "🏆 Sélections", name: selection, widget: markdown, required: false}
+      - {label: "🏦 Producteurs", name: productor, widget: markdown, required: false}
+
   - name: settings
     label: "Réglages"
     files:
