@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
+// import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
@@ -8,10 +8,10 @@ import Content, { HTMLContent } from "../components/Content";
 import Container from "../components/Container";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Heading from "../components/Heading";
-import styled from "styled-components";
+// import styled from "styled-components";
 import ReactPlayer from "react-player";
 import { Row, Col } from "../components/GridSystem";
-import Box from "../components/Box";
+// import Box from "../components/Box";
 
 export const ProductionPostTemplate = ({
   content,

@@ -2,12 +2,12 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-// import Layout from "../components/Layout";
-// import BlogList from "../components/BlogList";
-// import HomeHero from "../components/HomeHero";
-// import HomeFeaturedMovies from "../components/HomeFeaturedMovies";
-// import Container from "../components/Container";
-// import Box from "../components/Box";
+import Layout from "../components/Layout";
+import BlogList from "../components/BlogList";
+import HomeHero from "../components/HomeHero";
+import HomeFeaturedMovies from "../components/HomeFeaturedMovies";
+import Container from "../components/Container";
+import Box from "../components/Box";
 
 export const IndexPageTemplate = ({ data }) => {
   // const actu = data.actu.edges;
@@ -17,13 +17,13 @@ export const IndexPageTemplate = ({ data }) => {
       {/* <pre style={{ background: "linen", fontSize: 10, color: "navy" }}>
         {JSON.stringify(data.feat, null, 2)}
       </pre> */}
-      {/* <Container>
+      <Container>
         <HomeHero />
         <Box py={4}>
           <HomeFeaturedMovies />
         </Box>
       </Container>
-      <BlogList /> */}
+      <BlogList />
     </>
   );
 };
@@ -32,10 +32,9 @@ const IndexPage = ({ data }) => {
   // const { frontmatter } = data.markdownRemark;
 
   return (
-    <>Hello</>
-    // <Layout>
-    //   <IndexPageTemplate data={data} />
-    // </Layout>
+    <Layout>
+      <IndexPageTemplate data={data} />
+    </Layout>
   );
 };
 
