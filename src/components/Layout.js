@@ -8,10 +8,10 @@ import styled from "styled-components";
 
 const Content = styled.div`
   padding-top: 1rem;
-  padding-bottom: ${(p) => p.theme.sizes.unit};
+  padding-bottom: ${(props) => props.theme.sizes.unit};
 
   @media (min-width: 1000px) {
-    padding-top: calc(1rem + ${(p) => p.theme.sizes.unit});
+    padding-top: calc(1rem + ${(props) => props.theme.sizes.unit});
   }
 `;
 
