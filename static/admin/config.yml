@@ -117,6 +117,37 @@ collections:
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
 
+  - name: postproduction
+    label: "Postproduction"
+    folder: "src/pages/postproduction"
+    create: true
+    slug: "{{slug}}"
+    required: false
+    fields:
+      - {label: "Template Key", name: templateKey, widget: hidden, default: "postproduction-post"}
+      - {label: "Titre", name: title, widget: string}
+      - {label: "Introduction", name: description, widget: text, required: false}
+      - {label: "Image principale", name: featuredimage, widget: image, required: false}
+      - {label: "Texte principal", name: body, widget: markdown, required: false}
+      - name : document_list
+        label : "📁 Documents"
+        widget: list
+        label_singular: "📃 Fichier"
+        required: false
+        fields:
+          - {name: document_item, label: "Document", widget: file, required: true}
+          - {name: document_title, label: "Nom du fichier", widget: string, required: false}
+      - name: team_list
+        label: "👥 Équipe"
+        label_singular: "👤 Membre"
+        widget: list
+        required: false
+        fields: 
+          - {label: "Nom", name: team_name, widget: string, required: true}
+          - {label: "Portrait", name: team_portrait, widget: "image", required: false}
+          - {label: "Titre", name: team_title, widget: string, required: false}
+          - {label: "Texte", name: team_text, widget: text, required: false}
+
   - name: settings
     label: "Réglages"
     files:
